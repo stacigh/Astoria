@@ -87,29 +87,19 @@
 	<h3 class="center">We are a reformed full gospel church committed to Biblical purity, love of the brethren, and endeavoring to minister to the lost.</h3>
     </div><!-- end div#wrapper-article -->   
     
+    <!-- Useful Information -->
     <a href="<?php echo bloginfo('url'); ?>/category/articles/useful-information/" alt="Useful information all Christians should know." class="button-large-banner grid_8">
-    	<img src="<?php bloginfo('template_url'); ?>/img/icon-banner-new.png" alt="New Content!" class="icon-button-large-banner" />
     	<h4>Useful Information</h4>
     	<p>Information that all Christians should know.</p>
     </a><!-- /button-large-banner -->
     
-        
-    <div id="wrapper-prayer-request" class="grid_8">
-    	<h4>Prayer Request</h4>
-        <p>If you would like us to pray for you, send us your name and email (both are optional) along with your prayer request.</p>
-        <form name="prayer-request" action="<?php bloginfo('template_url'); ?>/prayer-request-engine.php" method="post">
-        
-            <label for="prayer-request-name" class="label-first">Name</label>
-            <label for="prayer-request-email" class="label-second">Email</label>
-            <label for="prayer-request-request" class="label-third">Request</label>
-            
-            <input type="text" class="prayer-request-resting-state" id="prayer-request-name" name="prayer-request-name" placeholder="Name"  onblur="if (this.value == '') {this.value = 'Name';}" onfocus="if (this.value == 'Name') {this.value = '';}" />
-            <input type="text" class="prayer-request-resting-state" id="prayer-request-email" name="prayer-request-email" placeholder="Email" onblur="if (this.value == '') {this.value = 'Email';}" onfocus="if (this.value == 'Email') {this.value = '';}" />
-            <input type="text" class="prayer-request-resting-state" id="prayer-request-request" name="prayer-request-request" placeholder="Request" required="required" onblur="if (this.value == '') {this.value = 'Request';}" onfocus="if (this.value == 'Request') {this.value = '';}" />
-            <input type="submit" value="" style="height:0;overflow:auto;position:absolute;left:-9999px;" />
-            <input type="submit" class="button-submit" id="prayer-request-submit" name="prayer-request-sumbit" value="Submit" />
-        </form>
-    </div><!-- end div#wrapper-prayer-request -->
+    <!-- Audio Callout -->
+    <a href="<?php echo bloginfo('url'); ?>/category/audio/" alt="Audio teachings online!" class="button-large-banner grid_8">
+    	<img src="<?php bloginfo('template_url'); ?>/img/icon-banner-new.png" alt="New Content!" class="icon-button-large-banner" />
+    	<h4>Audio Teachings</h4>
+    	<p>Full length audio teachings are online now!</p>
+    </a><!-- /button-large-banner -->
+    
     <div class="clear"></div>
     
     

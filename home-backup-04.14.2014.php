@@ -1,11 +1,54 @@
 <?php get_header(); ?>
 
+<!-- TIME TRIGGERED BROADCAST BUTTONS -->
+<?php
+	// RADIO SCHEDULES! These will toggle a button that tells the user that the show is online. 
+	// There are additional paramaters in the 'timer.php' file.
+		// Variables
+		$h = date('G');
+		$m = date('i');
+		$d = date('l');
+		
+		//Display the CTA Bar on Saturdays and is TIME SPECIFIC!!
+		//The next line is for development purposes. Comment the live code and uncomment the development code to test.
+		//if ($d == 'Monday' ){
+		if ($d == 'Saturday' && $h == 01 && $m <=20 || $h == 05 || $h == 09 || $h == 13 || $h == 17 || $h == 21) {
+			$ctaBarToggle = 'radio-online';	
+		} else {
+			$ctaBarToggle = 'radio-offline';	
+		}	
+		
+		//Radio Pan Am Schedule - Displays Saturdays and doesn't need time params because it's hidden when the CTA bar is hidden. 
+		//The next line is for development purposes. Comment the live code and uncomment the development code to test.
+		//if ($d == 'Saturday') {
+		if ($d == 'Saturday') {
+			$radioTimeToggle = 'radio-online';
+		} else {
+			$radioTimeToggle = 'radio-offline';
+		}	
+		
+		//Radio Schedule Button Text - Displays Saturdays and is time specific (this is because it also controls the bottom radio schedule button as well as the url for the launch player button)
+		//The next line is for development purposes. Comment the live code and uncomment the development code to test.
+		//if ($d == 'Saturday' && $h == 01 && $m <=20 || $h == 05 || $h == 09 || $h == 13 || $h == 17 || $h == 21) {
+		if ($d == 'Saturday' && $h == 01 && $m <=20 || $h == 05 || $h == 09 || $h == 13 || $h == 17 || $h == 21) {
+			$radioScheduleText = 'Listen Now!';
+			$radioScheduleLink = 'http://www.radiopanam.com/listen.html';
+			$radioScheduleTarget = '_blank';
+		} else {
+			$radioScheduleText = 'Browse the Archives';
+			$radioScheduleLink = get_bloginfo('url').'/category/audio/';
+			$radioScheduleTarget = '_self';
+		}					
+?>
 
 
 <!-- BEGIN PAGE TITLE -->
 <div id="wrapper-slider-100">
 	<div id="wrapper-slider" class="container_16">
     	<div id="slider" class="grid_16 nivoSlider">
+    	
+    	<a href="http://www.soundanalarm.com/2013/articles/useful-information/a-preacher-on-the-fence/" title="A Preacher on the Fence">
+    	<img src="<?php bloginfo("template_url"); ?>/img/slider/slider-preacher-on-the-fence.png" alt="A poem that describes many of todays luke warm pastors/teachers. Click to read." title="A Preacher on the Fence" />
 
 		<a href="http://www.soundanalarm.com/2012/audio/hazardous-times-in-the-church/" title="Listen Now">
 		<img src="<?php bloginfo("template_url"); ?>/img/slider/slider-wolf-in-sheeps-clothes.png" alt="Hazardous Times in the Church explores 2 Timothy 3 and covers imposters and frauds who invade the church! Paul sends Timothy a letter telling him to expect this kind of warfare. Friends, it happens still. And it’s not going to get easier, it’s going to get worse!" title="Hazardous Times" />
@@ -17,11 +60,27 @@
             <img src="<?php bloginfo("template_url"); ?>/img/slider/slider-bugle.png" alt='Our purpose is to help clear up confusion and error that has taken hold of the church. We pray the Lord will use this Website as we are faithful to exhort, edify, and comfort the true church to walk in true Biblical love and Holiness so that the "gates of hell shall not prevail against the church of Jesus Christ." Mt 16:18' title="Sound An Alarm!" />
             <img src="<?php bloginfo("template_url"); ?>/img/slider/slider-old-brick-church-summer.png" alt="We are located at the Old Brick Church on Route 2 in Williston, Vermont." title="Christian Faith Assembly"/>
             <img src="<?php bloginfo("template_url"); ?>/img/slider/slider-worship-schedule.png" alt="Christian Faith Assembly meets Sundays from 10:00am to 12:00pm at Old Brick Church on Route 2 in Williston, Vermont." title="Worship Schedule" />
-            <img src="<?php bloginfo("template_url"); ?>/img/slider/slider-broadcast.png" alt="Sound An Alarm broadcasts globally through Universal Christian Radio every Sunday!" title="Broadcasting Globally" />
+            <img src="<?php bloginfo("template_url"); ?>/img/slider/slider-broadcast.png" alt="Sound An Alarm broadcasts globally through Radio Pan Am every Sunday!" title="Broadcasting Globally" />
         </div><!-- end div#slider -->
     </div><!-- end div#wrapper-slider -->
 </div><!-- end div#wrapper-slider-100 -->
 <!-- END PAGE TITLE -->
+
+<div id="wrapper-cta-100" class="<?php echo $ctaBarToggle ?>">
+	<div id="wrapper-cta" class="container_16">
+    	<div id="cta-play-current" class="grid_8">          
+			<p>Live Stream is</p>
+            <h6>Online! Listen Now! <span><?php echo date('F j, Y'); ?></span></h6>
+        </div><!-- end div#cta-play-current -->
+        
+        <div id="cta-view-more" class="grid_8">          
+            
+            <p><a class="<?php echo $radioTimeToggle; ?> right" href="<?php echo($radioScheduleLink); ?>" title="Listen Live on Radio Pan Am - Click to Launch Player" target="_blank">Launch Player</a></p>
+            
+        </div><!-- div#cta-view-more -->
+        
+    </div><!-- end div#wrapper-cta -->
+</div><!-- end div#wrapper-cta-100 -->
 
 <div id="wrapper-body-home" class="container_16">
     <div id="wrapper-article" class="grid_16">
@@ -92,8 +151,10 @@
 	    	<h4>Radio Schedule</h4>
 	    	<div class="expand-schedule globalradio">
 	    		<p>&nbsp;</p>
-	    		<p>Lots of topics!</p>
-	    		<a class="radio-toggle-button" href="<?php get_bloginfo('url'); ?>/category/audio/" alt="Browse the Archives">Browse the Archives</a>
+	    		<p>Broadcasting globally through Radio Pan Am <a class="icon-link" href="http://www.radiopanam.com/listen.html" target="_blank" alt="Listen on Radio Pan Am"><img src="<?php bloginfo('template_url'); ?>/img/icon-link.png" /></a></p>
+	    		<p>&nbsp;</p>
+	    		<p>Saturdays: 4am, 8am, 12pm, 4pm, 8pm and 12am EST</p>
+	    		<a class="radio-toggle-button" href="<?php echo($radioScheduleLink); ?>" alt="<?php echo($radioScheduleText); ?>" target="<?php echo($radioScheduleTarget); ?>"><?php echo($radioScheduleText); ?></a>
 	    	</div>
 	    </div>
     </div> 
