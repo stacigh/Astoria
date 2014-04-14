@@ -1,0 +1,17 @@
+#wrapper-newsletter input[type=submit].button-submit, #wrapper-prayer-request input[type=submit].button-submit { 
+	filter: none !important;
+	bottom: 10px;
+	width: 89px !important;
+}
+.button-blue {
+	filter: none !important;	
+}
+
+
+.wrapper-schedule .expand-schedule a.radio-toggle-button {
+	display: none;
+}
+
+.wrapper-schedule:hover .expand-schedule a.radio-toggle-button {
+	display: block;
+}

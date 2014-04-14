@@ -1,0 +1,36 @@
+#wrapper-header-100, #wrapper-footer-100, #wrapper-primary-sidebar, #wrapper-slider-100, #wrapper-cta-100, #wrapper-newsletter, #wrapper-prayer-request, #respond, #comments, .navigation, .commentlist, .wp-paginate {
+	display: none;	
+}
+
+* {
+	color: #999;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 11pt;
+	line-height: 18pt;
+}
+h1, h2 {
+	font-size: 18pt;	
+	margin: 0;
+}	
+h3, h4 {
+	font-size: 16pt;	
+	margin: 0;
+}
+h5, h6 {
+	font-size: 14pt;	
+	margin: 0;
+}
+body {
+	padding: 0px;	
+	margin: 0;		
+}
+a:link, a:visited {
+	color: #1ea2eb;	
+}
+#wrapper-article {
+	color: #000;
+	background: #fff;	
+}
+#wrapper-body-home h6 {
+	margin-bottom: 0 !important;
+}

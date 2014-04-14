@@ -1,0 +1,2 @@
+[29-Oct-2012 05:38:59 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[06-Dec-2013 01:08:44 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/staceyla/public_html/soundanalarm.com/wp-content/themes/Astoria/index.php on line 1

@@ -1,0 +1,1 @@
+<p>Posted in <?php the_category(','); ?> by <?php the_author() ?></p>

@@ -1,0 +1,151 @@
+#nav {
+	width: 355px;
+}
+#copyright-info {
+	*margin-top: 0px; /* IE7 */
+	margin-top: 28px\9;	/* IE8 */
+}
+#copyright-info p {
+	*padding-top: 0px;		
+}
+#wrapper-primary-sidebar {
+	*margin-top: 0px;
+	*position: relative;
+	*top: -25px;
+	*right: 10px;
+	*height: 100% !important;
+}
+#sidebar-search input[type=text] {
+	padding-top: 2px;
+	height: 20px;
+}
+#sidebar-legend-box-box h1 {
+	*margin-top: -15px;
+}
+
+#wrapper-newsletter, #wrapper-prayer-request {
+	width: 436px;
+}
+#wrapper-newsletter label, #wrapper-prayer-request label {
+	*text-indent: 0px;
+	*width: 112px;
+	*position: absolute;
+	*bottom: 40px;
+}
+.label-first {
+	left: 13px;
+}
+.label-second {
+	left: 128px;
+}
+.label-third {
+	left: 243px;
+}
+#wrapper-newsletter input[type=text], #wrapper-prayer-request input[type=text] {	
+	*width: 102px !important;
+	padding-top: 5px;
+	height: 21px;
+	*margin-top: 20px;
+}
+#wrapper-newsletter input[type=submit].button-submit, #wrapper-prayer-request input[type=submit].button-submit { 
+	width: 89px;
+	height: 29px;
+	*padding-top: 2px;
+	*bottom: 11px !important;
+	bottom: 10px\9;
+	*background-image: none !important;
+	*background-color: #1ea2eb;
+	*filter: none;
+}
+#wrapper-newsletter input[type=submit].button-submit:hover, #wrapper-prayer-request input[type=submit].button-submit:hover {
+	background: #333;
+}
+#wrapper-footer-100 {
+	height: 450px\9;
+}
+#wrapper-footer2-100 {	
+	height: 80px\9;
+}
+.focused {
+	border: 1px solid #0f0;	
+}
+.button-blue {
+	*filter: none !important;	
+}
+.button-blue:hover {
+	background: #333;
+}
+#cf7 .wpcf7-submit {
+	height: 30px !important;	
+}
+#sidebar-current-category ul li:first-child {
+	margin-top: 0px;
+}	
+.sym img {
+	*padding-top: 15px;
+}
+#footer-col-1 ul li, #footer-col-2 ul li, #footer-col-3 ul li, #footer-col-4 ul li, #wrapper-footer h1 {
+	border-bottom: 1px solid #343434;
+}
+.wp-paginate {
+	margin-bottom: 30px !important;		
+}
+#wrapper-slider-100 {
+	background-image: none !important;
+	background-color: #02050a;	
+}
+#wrapper-cta {
+	*margin-top: 10px !important;
+	margin-top: 22px\9;
+}
+
+
+/* Home Page Styles
+============================================= */
+.button-large-banner {
+	width: 440px !important;
+	min-height: 138px !important;
+}
+
+.button-large-banner h4 {
+	margin-top: 55px;
+}
+
+.wrapper-schedule {
+	width: 200px !important;
+	height: 100px !important;
+}
+.wrapper-schedule.church:hover {
+	height: 237px !important;
+}
+.wrapper-schedule.television:hover {
+	height: 543px !important;
+}
+.wrapper-schedule.globalradio:hover {
+	height: 237px !important;
+}
+
+.wrapper-schedule .expand-schedule {
+	display: none;
+}
+
+.wrapper-schedule:hover .expand-schedule {
+	display: block;
+}
+
+.wrapper-schedule .expand-schedule a.radio-toggle-button {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px 0px;
+	background: #202020;
+	border-top: 1px solid #fff;
+	color: #fff;
+	text-decoration: none;
+}
+
+.wrapper-schedule .expand-schedule a.radio-toggle-button:hover {
+	text-decoration: underline;
+}
